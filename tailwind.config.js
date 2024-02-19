@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'm-plus-code': ['M PLUS Code Latin', 'sans-serif'],
+        'kode-mono': ['"Kode Mono"', 'monospace'],
       },
       colors: {
         primary: "#9F7551",
