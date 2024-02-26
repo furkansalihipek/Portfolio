@@ -8,22 +8,25 @@ export default function Home() {
 
   const openHandle = () => setOpen(!open);
 
-  useEffect(()=>{
-    if(open){
+  useEffect(() => {
+    if (open) {
       mobileMenu.current.classList = "flex flex-col justify-center items-center";
     }
-    else{
+    else {
       mobileMenu.current.classList = "hidden";
     }
-  },[open])
+  }, [open])
   return (
     <div className="flex flex-col max-h-screen container w-full ml-0 mr-0 md:ml-16 md:mr-16 pl-4 pr-4">
       <nav>
-        <div className="flex mt-5 justify-between items-center h-10">
-          <div className="pl-10 group font-kode-mono ">
-            <a href="#" className="text-primary group-hover:text-secondary transition-all duration-1000">
-              <span className="group-hover:hidden text-5xl  transition-all duration-1000">&lt; &gt;</span>
-              <span className="hidden group-hover:inline text-3xl transition-all duration-1000">&lt; Furkan İpek /&gt;</span>
+        <div className="flex mt-5 justify-between items-center">
+          <div className="font-kode-mono group w-full pl-10 transition-all duration-200 ease-linear">
+            <a href="#" className="text-primary">
+              <div className="flex text-xl md:text-2xl">
+                <div>&lt;</div>
+                <div className="w-0 overflow-hidden opacity-0 transition-all duration-200 ease-linear group-hover:w-36 md:group-hover:w-40 h-12 group-hover:opacity-100">Furkan İpek</div>
+                <div>/&gt;</div>
+              </div>
             </a>
           </div>
           <ul className="flex gap-20 ml-auto">
@@ -60,39 +63,39 @@ export default function Home() {
           </ul>
         </div>
         <ul className="hidden" ref={mobileMenu}>
-        <li className="mb-5 mt-5"><a href="#">Home</a></li>
-              <li className="mb-5 opacity-50 group hover:opacity-100">
-                <a href="#" className="relative">
-                  About
-                  <span className="absolute -top-3 bg-primary py-1 px-2 rounded-full text-xs opacity-0 group-hover:opacity-100 transition-all duration-500">Soon</span>
-                </a>
-              </li>
-              <li className=" mb-5 opacity-50 group hover:opacity-100">
-                <a href="#" className="relative">
-                  Portfolio
-                  <span className="absolute -top-3 bg-primary py-1 px-2 rounded-full text-xs opacity-0 group-hover:opacity-100 transition-all duration-500">Soon</span>
-                </a>
-              </li>
-              <li className="mb-5 opacity-50 group hover:opacity-100">
-                <a href="#" className="relative">
-                  Services
-                  <span className="absolute -top-3 bg-primary py-1 px-2 rounded-full text-xs opacity-0 group-hover:opacity-100 transition-all duration-500">Soon</span>
-                </a>
-              </li>
-              <li className="mb-5 opacity-50 group hover:opacity-100">
-                <a href="#" className="relative">
-                  Contact
-                  <span className="absolute -top-3 bg-primary py-1 px-2 rounded-full text-xs opacity-0 group-hover:opacity-100 transition-all duration-500">Soon</span>
-                </a>
-              </li>
+          <li className="mb-5 mt-5"><a href="#">Home</a></li>
+          <li className="mb-5 opacity-50 group hover:opacity-100">
+            <a href="#" className="relative">
+              About
+              <span className="absolute -top-3 bg-primary py-1 px-2 rounded-full text-xs opacity-0 group-hover:opacity-100 transition-all duration-500">Soon</span>
+            </a>
+          </li>
+          <li className=" mb-5 opacity-50 group hover:opacity-100">
+            <a href="#" className="relative">
+              Portfolio
+              <span className="absolute -top-3 bg-primary py-1 px-2 rounded-full text-xs opacity-0 group-hover:opacity-100 transition-all duration-500">Soon</span>
+            </a>
+          </li>
+          <li className="mb-5 opacity-50 group hover:opacity-100">
+            <a href="#" className="relative">
+              Services
+              <span className="absolute -top-3 bg-primary py-1 px-2 rounded-full text-xs opacity-0 group-hover:opacity-100 transition-all duration-500">Soon</span>
+            </a>
+          </li>
+          <li className="mb-5 opacity-50 group hover:opacity-100">
+            <a href="#" className="relative">
+              Contact
+              <span className="absolute -top-3 bg-primary py-1 px-2 rounded-full text-xs opacity-0 group-hover:opacity-100 transition-all duration-500">Soon</span>
+            </a>
+          </li>
         </ul>
       </nav>
 
       <main className="mt-16 w-full">
-        <section className="flex flex-wrap-reverse justify-center items-center gap-48">
+        <section className="flex flex-wrap-reverse justify-center items-center md:gap-48">
           <div className="flex-1 p-10">
-            <h2 className="text-3xl">Furkan İPEK</h2>
-            <h1 className="font-bold mt-5 text-5xl text-primary">DEVELOPER</h1>
+            <h2 className="text-xl md:text-3xl">Furkan İPEK</h2>
+            <h1 className="font-bold mt-5 text-3xl md:text-5xl text-primary">DEVELOPER</h1>
             <p className="mt-5 font-anta">Selam 👋 <br></br>Ben Furkan İPEK. 20 yaşımdayım. Burdur Mehmet Akif Ersoy Üniversitesinde Bilgisayar Programcılığı bölümünde okuyorum. İzmir’in Konak ilçesinde doğdum. Çocukluğumu ve üniversite dönemine kadar olan eğitim hayatımı İzmirde geçirdim. </p>
             <div className="flex mt-10 flex-col md:flex-row items-center">
               <button href="#" className="w-[107px] h-20 relative px-6 py-3 overflow-hidden group">
@@ -102,7 +105,7 @@ export default function Home() {
               <img src="rightArrow.png" alt="Img" className="mt-5 hidden md:block md:mt-0 md:ml-5" />
             </div>
           </div>
-          <div className="flex justify-center items-center w-80 md:w-80">
+          <div className="flex justify-center items-center w-72 md:w-80">
             <img src="IMG_1227.jpg" alt="Img" className="border rounded-2xl border-primary" />
           </div>
         </section>
@@ -110,7 +113,7 @@ export default function Home() {
 
 
       <footer className="h-24">
-        <div className="flex justify-center md:justify-start gap-20 mt-32">
+        <div className="flex justify-center md:justify-start gap-20 mt-10 md:mt-32">
           <div className="pl-0 md:pl-11">
             <h2 className="font-bold mb-5">CONTACT</h2>
             <a href="mailto:furkan@ipek.dev">furkan@ipek.dev</a>
