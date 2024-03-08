@@ -8,3 +8,15 @@ body {
 html, body, #root {
     width: 100%;
 }
+ @media (min-width:1440px){
+    .container{
+        height: 100%;
+        width: 1440px;
+    }
+}
+@media (min-width:1920px){
+    .container{
+        height: 100%;
+        width: 1920px;
+    }
+}

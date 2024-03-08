@@ -6,6 +6,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        '3xl': '1440px',
+        '4xl': '2560px',
+      },
       fontFamily: {
         'quicksand': ['Quicksand', 'sans-serif'],
         'kode-mono': ['"Kode Mono"', 'monospace'],
