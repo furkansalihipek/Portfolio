@@ -1,127 +1,96 @@
-"use client"
-import { useEffect, useRef, useState } from "react";
-import { IoIosCloseCircleOutline } from "react-icons/io";
-import { RxHamburgerMenu } from "react-icons/rx";
+"use client";
+
+import Link from "next/link";
+import Navbar from "@/components/Navbar";
+
 export default function Home() {
-  const [open, setOpen] = useState(false);
-  const mobileMenu = useRef();
-
-  const openHandle = () => setOpen(!open);
-
-  useEffect(() => {
-    if (open) {
-      mobileMenu.current.classList = "flex flex-col justify-center items-center";
-    }
-    else {
-      mobileMenu.current.classList = "hidden";
-    }
-  }, [open])
   return (
-    <div className="container mx-auto px-20 xl:px-32 2xl:px-0">
-      <div className="flex flex-col max-h-screen">
-        <nav>
-          <div className="flex mt-5 justify-between items-center">
-            <div className="font-kode-mono group pl-10 transition-all duration-200 ease-linear">
-              <a href="#" className="text-primary">
-                <div className="flex text-xl md:text-2xl">
-                  <div>&lt;</div>
-                  <div className="w-0 overflow-hidden opacity-0 transition-all duration-200 ease-linear group-hover:w-36 md:group-hover:w-40 h-8 group-hover:opacity-100">Furkan İpek</div>
-                  <div>/&gt;</div>
-                </div>
-              </a>
-            </div>
-            <ul className="flex gap-20 ml-auto 2xl:text-3xl">
-              <div className="gap-20 items-center justify-center hidden md:flex">
-                <li><a href="#">Home</a></li>
-                <li className="opacity-50 group hover:opacity-100">
-                  <a href="#" className="relative">
-                    About
-                    <span className="absolute -top-3 bg-primary py-1 px-2 rounded-full text-xs opacity-0 group-hover:opacity-100 transition-all duration-500">Soon</span>
-                  </a>
-                </li>
-                <li className="opacity-50 group hover:opacity-100">
-                  <a href="#" className="relative">
-                    Portfolio
-                    <span className="absolute -top-3 bg-primary py-1 px-2 rounded-full text-xs opacity-0 group-hover:opacity-100 transition-all duration-500">Soon</span>
-                  </a>
-                </li>
-                <li className="opacity-50 group hover:opacity-100">
-                  <a href="#" className="relative">
-                    Services
-                    <span className="absolute -top-3 bg-primary py-1 px-2 rounded-full text-xs opacity-0 group-hover:opacity-100 transition-all duration-500">Soon</span>
-                  </a>
-                </li>
-                <li className="opacity-50 group hover:opacity-100">
-                  <a href="#" className="relative">
-                    Contact
-                    <span className="absolute -top-3 bg-primary py-1 px-2 rounded-full text-xs opacity-0 group-hover:opacity-100 transition-all duration-500">Soon</span>
-                  </a>
-                </li>
-              </div>
-              <button onClick={openHandle} className="block md:hidden">
-                {open ? <IoIosCloseCircleOutline size={30} /> : <RxHamburgerMenu size={30} />}
-              </button>
-            </ul>
-          </div>
-          <ul className="hidden" ref={mobileMenu}>
-            <li className="mb-5 mt-5"><a href="#">Home</a></li>
-            <li className="mb-5 opacity-50 group hover:opacity-100">
-              <a href="#" className="relative">
-                About
-                <span className="absolute -top-3 bg-primary py-1 px-2 rounded-full text-xs opacity-0 group-hover:opacity-100 transition-all duration-500">Soon</span>
-              </a>
-            </li>
-            <li className=" mb-5 opacity-50 group hover:opacity-100">
-              <a href="#" className="relative">
-                Portfolio
-                <span className="absolute -top-3 bg-primary py-1 px-2 rounded-full text-xs opacity-0 group-hover:opacity-100 transition-all duration-500">Soon</span>
-              </a>
-            </li>
-            <li className="mb-5 opacity-50 group hover:opacity-100">
-              <a href="#" className="relative">
-                Services
-                <span className="absolute -top-3 bg-primary py-1 px-2 rounded-full text-xs opacity-0 group-hover:opacity-100 transition-all duration-500">Soon</span>
-              </a>
-            </li>
-            <li className="mb-5 opacity-50 group hover:opacity-100">
-              <a href="#" className="relative">
-                Contact
-                <span className="absolute -top-3 bg-primary py-1 px-2 rounded-full text-xs opacity-0 group-hover:opacity-100 transition-all duration-500">Soon</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
+    <div className="flex min-h-[100dvh] flex-col lg:h-[100dvh] lg:max-h-[100dvh] lg:overflow-hidden">
+      <div className="container mx-auto flex min-h-0 flex-1 flex-col px-6 sm:px-12 md:px-16 xl:px-24 2xl:px-0">
+        <Navbar />
 
-        <main className="mt-16 2xl:mt-40 w-full">
-          <section className="flex flex-wrap-reverse justify-center items-center md:gap-48">
-            <div className="flex-1 p-10">
-              <h2 className="text-xl md:text-3xl 2xl:text-5xl">Furkan İPEK</h2>
-              <h1 className="font-bold mt-5 text-3xl md:text-5xl text-primary 2xl:text-7xl">DEVELOPER</h1>
-              <p className="mt-5 font-anta 2xl:text-3xl">Selam 👋 <br></br>Ben Furkan İPEK. 20 yaşımdayım. Burdur Mehmet Akif Ersoy Üniversitesinde Bilgisayar Programcılığı bölümünde okuyorum. İzmir’in Konak ilçesinde doğdum. Çocukluğumu ve üniversite dönemine kadar olan eğitim hayatımı İzmirde geçirdim. </p>
-              <div className="flex mt-10 flex-col md:flex-row items-center">
-                <button href="#" className="w-[107px] h-20 relative px-6 py-3 overflow-hidden group">
-                  <span className="h-28 w-40 bg-primary absolute bottom-10 -translate-x-full ease-out duration-500 translate-y-full mb-9 ml-9 group-hover:ml-32"></span>
+        <main className="flex min-h-0 w-full flex-1 flex-col justify-center py-3 md:py-4">
+          <section className="flex flex-wrap-reverse items-center justify-center gap-8 md:gap-12 lg:gap-20 xl:gap-28 2xl:gap-36">
+            <div className="flex-1 p-4 md:p-6 lg:p-8">
+              <p className="mb-2 font-kode-mono text-sm text-primary tracking-wide md:mb-3 md:text-base">
+                Front-end · UI &amp; Web
+              </p>
+              <h2 className="text-xl tracking-tight md:text-3xl 2xl:text-5xl">
+                Furkan İPEK
+              </h2>
+              <h1 className="mt-2 text-3xl font-bold tracking-tight text-primary md:mt-3 md:text-5xl 2xl:text-7xl">
+                DEVELOPER
+              </h1>
+              <div className="mt-4 max-w-xl space-y-3 font-anta text-base leading-relaxed text-white/90 md:mt-5 md:text-lg 2xl:text-xl">
+                <p>
+                  Hi 👋 I build interfaces that feel considered — structure first,
+                  then typography, motion, and the details people notice without
+                  knowing why. Clean markup and readable components matter as
+                  much as the pixels on screen.
+                </p>
+                <p className="text-[0.95em] leading-relaxed text-white/65 md:text-lg">
+                  Computer Programming graduate, based in Turkey. The longer
+                  story — background, how I work, what&apos;s next — lives on{" "}
+                  <Link
+                    href="/about"
+                    className="text-primary underline-offset-4 hover:underline decoration-primary/60"
+                  >
+                    About
+                  </Link>
+                  .
+                </p>
+              </div>
+              <div className="mt-6 flex flex-col items-center md:mt-7 md:flex-row">
+                <a
+                  href="mailto:furkan@ipek.dev?subject=Project%20inquiry"
+                  className="group relative inline-flex h-20 w-[107px] items-center justify-center overflow-hidden px-6 py-3"
+                >
+                  <span className="absolute bottom-10 left-0 mb-9 ml-9 h-28 w-40 -translate-x-full translate-y-full bg-primary duration-500 ease-out group-hover:ml-32" />
                   <span className="relative duration-300">Hire Me</span>
-                </button>
-                <img src="rightArrow.png" alt="Img" className="mt-5 hidden md:block md:mt-0 md:ml-5" />
+                </a>
+                <img
+                  src="rightArrow.png"
+                  alt=""
+                  className="mt-4 hidden md:mt-0 md:ml-5 md:block"
+                  aria-hidden
+                />
               </div>
             </div>
-            <div className="flex justify-center items-center w-72 md:w-80 2xl:w-96">
-              <img src="IMG_1227.jpg" alt="Img" className="border rounded-2xl border-primary" />
+            <div className="flex w-64 shrink-0 justify-center sm:w-72 md:w-72 lg:w-80 2xl:w-96">
+              <img
+                src="IMG_1227.jpg"
+                alt="Furkan İpek"
+                className="max-h-[28vh] w-auto rounded-2xl border border-primary object-cover object-center sm:max-h-[32vh] md:max-h-[36vh] lg:max-h-[42vh] lg:object-top xl:max-h-[48vh]"
+              />
             </div>
           </section>
         </main>
 
-
-        <footer className="h-24 2xl:mt-32">
-          <div className="flex justify-center md:justify-start gap-20 mt-10 md:mt-32 2xl:text-3xl">
-            <div className="pl-0 md:pl-11">
-              <h2 className="font-bold mb-5">CONTACT</h2>
-              <a href="mailto:furkan@ipek.dev">furkan@ipek.dev</a>
+        <footer className="mt-auto shrink-0 border-t border-white/10 pt-4 sm:pt-5 md:border-0 md:pt-3">
+          <div className="flex flex-col justify-center gap-8 pb-4 sm:flex-row sm:gap-14 md:justify-start md:pb-5 md:text-lg lg:text-xl">
+            <div className="text-center md:pl-11 md:text-left">
+              <h2 className="font-bold mb-2 font-kode-mono text-sm text-primary tracking-widest">
+                CONTACT
+              </h2>
+              <a
+                href="mailto:furkan@ipek.dev"
+                className="text-white/90 hover:text-primary transition-colors"
+              >
+                furkan@ipek.dev
+              </a>
             </div>
-            <div>
-              <h2 className="font-bold mb-5">FOLLOW</h2>
-              <a href="https://www.linkedin.com/in/furkansalihipek/">Linkedin</a>
+            <div className="text-center md:text-left">
+              <h2 className="font-bold mb-2 font-kode-mono text-sm text-primary tracking-widest">
+                FOLLOW
+              </h2>
+              <a
+                href="https://www.linkedin.com/in/furkansalihipek/"
+                className="text-white/90 hover:text-primary transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
             </div>
           </div>
         </footer>

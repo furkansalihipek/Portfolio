@@ -2,21 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    font-family: Anta, sans-serif;
-}
-html, body, #root {
+/* Base look stays even if className utilities fail to attach in dev */
+@layer base {
+  html {
+    @apply bg-background text-white antialiased;
+  }
+  html,
+  body {
     width: 100%;
+    min-height: 100%;
+  }
+  body {
+    font-family: Anta, var(--font-inter), ui-sans-serif, sans-serif;
+  }
 }
- @media (min-width:1440px){
-    .container{
-        height: 100%;
-        width: 1440px;
-    }
+@media (min-width: 1440px) {
+  .container {
+    height: 100%;
+    width: 1440px;
+  }
 }
-@media (min-width:1920px){
-    .container{
-        height: 100%;
-        width: 1920px;
-    }
+@media (min-width: 1920px) {
+  .container {
+    height: 100%;
+    width: 1920px;
+  }
 }

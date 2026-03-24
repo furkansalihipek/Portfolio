@@ -1,9 +1,5 @@
 module.exports = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
       screens: {
@@ -11,10 +7,15 @@ module.exports = {
         '4xl': '2560px',
       },
       fontFamily: {
-        'quicksand': ['Quicksand', 'sans-serif'],
-        'kode-mono': ['"Kode Mono"', 'monospace'],
-        'sans': ['Raleway', 'sans-serif'],
-        'anta': ['Anta', 'sans-serif'],
+        quicksand: ['Quicksand', 'sans-serif'],
+        'kode-mono': ['"Kode Mono"', 'ui-monospace', 'monospace'],
+        sans: ['Raleway', 'sans-serif'],
+        anta: [
+          'Anta',
+          'var(--font-inter)',
+          'ui-sans-serif',
+          'sans-serif',
+        ],
       },
       colors: {
         primary: "#9F7551",
