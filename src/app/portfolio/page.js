@@ -14,7 +14,7 @@ function ProjectCard({ project }) {
   const hasWebOrRepoLinks = Boolean(demoUrl || repoUrl);
 
   return (
-    <article className="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 md:p-8 flex flex-col h-full transition-colors hover:border-primary/35">
+    <article className="group flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition-colors hover:border-primary/35 sm:p-6 md:p-8">
       <div className="flex flex-wrap items-baseline justify-between gap-2 mb-4">
         <h2 className="font-anta text-xl md:text-2xl text-white font-medium pr-4">
           {title}
@@ -87,24 +87,24 @@ function ProjectCard({ project }) {
 
 export default function PortfolioPage() {
   return (
-    <div className="container mx-auto px-20 xl:px-32 2xl:px-0">
+    <div className="container mx-auto w-full max-w-[100vw] px-4 sm:px-6 md:px-10 lg:px-14 xl:px-20 2xl:px-0">
       <div className="flex flex-col pb-4 md:pb-6">
         <Navbar />
 
-        <main className="mt-16 2xl:mt-24 w-full max-w-5xl px-10">
+        <main className="mt-8 w-full max-w-5xl sm:mt-12 md:mt-16 lg:mt-20 2xl:mt-24">
           <p className="text-primary font-kode-mono text-sm md:text-base mb-4">
             / portfolio
           </p>
-          <h1 className="text-3xl md:text-5xl 2xl:text-6xl font-bold mb-3 tracking-tight">
+          <h1 className="mb-3 text-2xl font-bold tracking-tight sm:text-3xl md:text-5xl 2xl:text-6xl">
             Selected work
           </h1>
-          <p className="text-white/55 font-anta text-lg md:text-xl max-w-2xl mb-12 leading-relaxed">
+          <p className="mb-8 max-w-2xl font-anta text-base leading-relaxed text-white/55 sm:mb-10 sm:text-lg md:mb-12 md:text-xl">
             Client-facing websites, an iOS build in the pipeline, and personal
             tools. Follow the links for live sites; mobile releases are called out
             when they&apos;re still pre–App Store.
           </p>
 
-          <div className="grid gap-6 md:gap-8 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-5 sm:gap-6 md:grid-cols-2 md:gap-8">
             {projects.map((project) => (
               <ProjectCard
                 key={`${project.title}-${project.year}`}
@@ -114,8 +114,8 @@ export default function PortfolioPage() {
           </div>
         </main>
 
-        <footer className="mt-10 md:mt-12 border-t border-white/10 pt-6 md:border-0 md:pt-4">
-          <div className="flex max-w-5xl flex-col px-10 sm:flex-row sm:justify-center md:justify-start gap-8 sm:gap-14 md:text-lg lg:text-xl">
+        <footer className="mt-10 border-t border-white/10 pt-6 md:mt-12 md:border-0 md:pt-4">
+          <div className="flex max-w-5xl flex-col gap-8 sm:flex-row sm:justify-center sm:gap-14 md:justify-start md:text-lg lg:text-xl">
             <div className="pl-0 md:pl-11 text-center md:text-left">
               <h2 className="font-bold mb-2 font-kode-mono text-sm text-primary tracking-widest">
                 CONTACT

@@ -8,11 +8,11 @@ export const metadata = {
 
 function ContactCard({ label, children }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-6 md:px-8 md:py-7">
-      <h2 className="font-kode-mono text-primary text-xs md:text-sm tracking-[0.2em] uppercase mb-3">
+    <div className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-5 sm:px-6 sm:py-6 md:px-8 md:py-7">
+      <h2 className="mb-2 font-kode-mono text-xs uppercase tracking-[0.2em] text-primary sm:mb-3 md:text-sm">
         {label}
       </h2>
-      <div className="font-anta text-lg md:text-xl text-white/90 leading-relaxed">
+      <div className="font-anta text-base leading-relaxed text-white/90 sm:text-lg md:text-xl">
         {children}
       </div>
     </div>
@@ -21,18 +21,18 @@ function ContactCard({ label, children }) {
 
 export default function ContactPage() {
   return (
-    <div className="container mx-auto px-20 xl:px-32 2xl:px-0">
+    <div className="container mx-auto w-full max-w-[100vw] px-4 sm:px-6 md:px-10 lg:px-14 xl:px-20 2xl:px-0">
       <div className="flex flex-col pb-4 md:pb-6">
         <Navbar />
 
-        <main className="mt-16 2xl:mt-24 w-full max-w-3xl px-10">
+        <main className="mt-8 w-full max-w-3xl sm:mt-12 md:mt-16 lg:mt-20 2xl:mt-24">
           <p className="text-primary font-kode-mono text-sm md:text-base mb-4">
             / contact
           </p>
-          <h1 className="text-3xl md:text-5xl 2xl:text-6xl font-bold mb-3 tracking-tight">
+          <h1 className="mb-3 text-2xl font-bold tracking-tight sm:text-3xl md:text-5xl 2xl:text-6xl">
             Let&apos;s talk
           </h1>
-          <p className="text-white/55 font-anta text-lg md:text-xl max-w-2xl mb-10 leading-relaxed">
+          <p className="mb-8 max-w-2xl font-anta text-base leading-relaxed text-white/55 sm:mb-10 sm:text-lg md:text-xl">
             Whether you have a project in mind, a role to discuss, or just want
             to connect — the best way to reach me is below. I read everything and
             reply when I can.
@@ -45,7 +45,7 @@ export default function ContactPage() {
               </p>
               <a
                 href="mailto:furkan@ipek.dev?subject=Hello%20from%20your%20portfolio"
-                className="inline-flex text-primary text-xl md:text-2xl font-medium underline-offset-4 hover:underline decoration-primary/50 break-all"
+                className="inline-flex break-words text-lg font-medium text-primary underline-offset-4 decoration-primary/50 hover:underline sm:text-xl md:text-2xl"
               >
                 furkan@ipek.dev
               </a>
@@ -57,7 +57,7 @@ export default function ContactPage() {
               </p>
               <a
                 href="https://www.linkedin.com/in/furkansalihipek/"
-                className="text-primary text-xl md:text-2xl underline-offset-4 hover:underline decoration-primary/50 inline-block"
+                className="inline-block break-all text-lg text-primary underline-offset-4 decoration-primary/50 hover:underline sm:text-xl md:text-2xl"
                 target="_blank"
                 rel="noopener noreferrer"
               >

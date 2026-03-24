@@ -8,23 +8,23 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="container mx-auto px-20 xl:px-32 2xl:px-0">
+    <div className="container mx-auto w-full max-w-[100vw] px-4 sm:px-6 md:px-10 lg:px-14 xl:px-20 2xl:px-0">
       <div className="flex flex-col pb-4 md:pb-6">
         <Navbar />
 
-        <main className="mt-16 2xl:mt-24 w-full max-w-3xl px-10">
+        <main className="mt-8 w-full max-w-3xl sm:mt-12 md:mt-16 lg:mt-20 2xl:mt-24">
           <p className="text-primary font-kode-mono text-sm md:text-base mb-4">
             / about
           </p>
-          <h1 className="text-3xl md:text-5xl 2xl:text-6xl font-bold mb-3 tracking-tight">
+          <h1 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-5xl 2xl:text-6xl mb-3">
             About me
           </h1>
-          <p className="text-white/55 font-anta text-lg md:text-xl max-w-2xl mb-10 leading-relaxed">
+          <p className="mb-8 max-w-2xl font-anta text-base leading-relaxed text-white/55 sm:mb-10 sm:text-lg md:text-xl">
             A few words on where I come from, what I care about in software, and
             how to reach me.
           </p>
 
-          <div className="font-anta space-y-8 text-lg md:text-xl 2xl:text-2xl text-white/90 leading-relaxed">
+          <div className="space-y-8 font-anta text-base leading-relaxed text-white/90 sm:text-lg md:text-xl 2xl:text-2xl">
             <section>
               <h2 className="font-kode-mono text-primary text-xs md:text-sm tracking-[0.2em] uppercase mb-4">
                 Now

@@ -6,29 +6,29 @@ import Navbar from "@/components/Navbar";
 export default function Home() {
   return (
     <div className="flex min-h-[100dvh] flex-col lg:h-[100dvh] lg:max-h-[100dvh] lg:overflow-hidden">
-      <div className="container mx-auto flex min-h-0 flex-1 flex-col px-6 sm:px-12 md:px-16 xl:px-24 2xl:px-0">
+      <div className="container mx-auto flex min-h-0 w-full max-w-[100vw] flex-1 flex-col px-4 sm:px-6 md:px-12 lg:px-16 xl:px-24 2xl:px-0">
         <Navbar />
 
-        <main className="flex min-h-0 w-full flex-1 flex-col justify-center py-3 md:py-4">
-          <section className="flex flex-wrap-reverse items-center justify-center gap-8 md:gap-12 lg:gap-20 xl:gap-28 2xl:gap-36">
-            <div className="flex-1 p-4 md:p-6 lg:p-8">
-              <p className="mb-2 font-kode-mono text-sm text-primary tracking-wide md:mb-3 md:text-base">
+        <main className="flex min-h-0 w-full flex-1 flex-col justify-center py-4 md:py-4">
+          <section className="flex flex-col-reverse items-center justify-center gap-6 md:flex-row md:flex-wrap-reverse md:gap-12 lg:gap-20 xl:gap-28 2xl:gap-36">
+            <div className="w-full flex-1 px-0 pb-2 sm:p-4 md:p-6 lg:p-8">
+              <p className="mb-2 font-kode-mono text-xs text-primary tracking-wide sm:text-sm md:mb-3 md:text-base">
                 Front-end · UI &amp; Web
               </p>
-              <h2 className="text-xl tracking-tight md:text-3xl 2xl:text-5xl">
+              <h2 className="text-lg tracking-tight sm:text-xl md:text-3xl 2xl:text-5xl">
                 Furkan İPEK
               </h2>
-              <h1 className="mt-2 text-3xl font-bold tracking-tight text-primary md:mt-3 md:text-5xl 2xl:text-7xl">
+              <h1 className="mt-1 text-2xl font-bold tracking-tight text-primary sm:mt-2 sm:text-3xl md:mt-3 md:text-5xl 2xl:text-7xl">
                 DEVELOPER
               </h1>
-              <div className="mt-4 max-w-xl space-y-3 font-anta text-base leading-relaxed text-white/90 md:mt-5 md:text-lg 2xl:text-xl">
+              <div className="mt-3 max-w-xl space-y-3 font-anta text-sm leading-relaxed text-white/90 sm:mt-4 sm:text-base md:mt-5 md:text-lg 2xl:text-xl">
                 <p>
                   Hi 👋 I build interfaces that feel considered — structure first,
                   then typography, motion, and the details people notice without
                   knowing why. Clean markup and readable components matter as
                   much as the pixels on screen.
                 </p>
-                <p className="text-[0.95em] leading-relaxed text-white/65 md:text-lg">
+                <p className="text-[0.95em] leading-relaxed text-white/65 sm:text-base md:text-lg">
                   Computer Programming graduate, based in Turkey. The longer
                   story — background, how I work, what&apos;s next — lives on{" "}
                   <Link
@@ -56,11 +56,11 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="flex w-64 shrink-0 justify-center sm:w-72 md:w-72 lg:w-80 2xl:w-96">
+            <div className="flex w-full max-w-[240px] shrink-0 justify-center sm:max-w-[280px] sm:w-72 md:w-72 lg:w-80 2xl:w-96">
               <img
                 src="IMG_1227.jpg"
                 alt="Furkan İpek"
-                className="max-h-[28vh] w-auto rounded-2xl border border-primary object-cover object-center sm:max-h-[32vh] md:max-h-[36vh] lg:max-h-[42vh] lg:object-top xl:max-h-[48vh]"
+                className="w-full max-h-[220px] rounded-2xl border border-primary object-cover object-center sm:max-h-[280px] md:max-h-[36vh] lg:max-h-[42vh] lg:object-top xl:max-h-[48vh]"
               />
             </div>
           </section>
